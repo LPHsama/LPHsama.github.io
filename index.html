@@ -331,8 +331,8 @@
       
         
           
-            <p>###树状数组区间求和，区间修改<br>维护原数组a的差分数组b，根据差分数组的性质可知<br>[<br>a[i]=\sum^i_{j=1}{b[i]}<br>]<br>对于区间修改，直接修改差分数组即可。  </p>
-<p>考虑如何利用差分数组b求a数组前缀和:<br>[<br>\sum^r_{i=1}{a[i]}\<br>=\sum^r_{i=1}\sum^i_{j=1}{b[i]}\<br>=\sum^r_{i=1}b[i]\times(r-i+1)\<br>=\sum^r_{i=1}b[i]\times(r+1)-\sum^r_{i=1}b[i]\times i<br>]<br>维护 $\sum b[i]$ 与 $\sum b[i]\times i$ 即可</p>
+            <h3 id="树状数组区间求和，区间修改"><a href="#树状数组区间求和，区间修改" class="headerlink" title="树状数组区间求和，区间修改"></a>树状数组区间求和，区间修改</h3><p>维护原数组a的差分数组b，根据差分数组的性质可知<br>$$<br> a[i]=\sum^i_{j=1}{b[i]}<br>$$<br>对于区间修改，直接修改差分数组即可。  </p>
+<p>考虑如何利用差分数组b求a数组前缀和:<br>$$<br> \sum^r_{i=1}{a[i]}\<br> =\sum^r_{i=1}\sum^i_{j=1}{b[i]}\<br> =\sum^r_{i=1}b[i]\times(r-i+1)\<br> =\sum^r_{i=1}b[i]\times(r+1)-\sum^r_{i=1}b[i]\times i<br>$$<br>维护 $\sum b[i]$ 与 $\sum b[i]\times i$ 即可</p>
 
           
         
@@ -803,6 +803,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
